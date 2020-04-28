@@ -5,7 +5,7 @@ AR=ar -r
 
 CC=cc
 LD=ld
-CFLAGS=-Wall -Wextra -Werror -pedantic -ansi -g -O3 -fPIC
+CFLAGS=-Wall -Wextra -pedantic -ansi -g -O3 -fPIC -std=c99
 
 INSTALL=install
 PREFIX=/usr/local

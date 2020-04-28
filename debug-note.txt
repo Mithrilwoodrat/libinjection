@@ -1,0 +1,20 @@
+在 libinjection.c 中
+
+添加 #define DEBUG 1
+
+然后修改宏定义以通过编译(gcc 新版本需要使用 __func__)，并打印 State 中的值
+
+#ifdef DEBUG
+#include <stdio.h>
+#define TRACE(hs) printf("%s:%d, pos:%ld\n", __func__ , __LINE__, hs->pos)
+#else
+
+然后在 src 目录中 make html5
+
+-u 指定是否使用 urldecode
+-f 指定 flag (Data)
+
+## 测试
+```
+./html5 -f 0 '<a>'
+```
